@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+/**************************** General styles *****************************/
+:root {
+  --primary-color: #2de38e;
+  --secondary-color: #1ec677;
+  --gray-bg: #fafafa;
+  --font-family: "Lato", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a.link {
+  color: var(--primary-color);
+  transition: all ease-in-out;
+}
+
+a.link:hover {
+  color: var(--secondary-color);
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+main {
+  margin-top: 10vh;
+}
+
+main > section > .container:not(.hero-mobile, .companies > .container) {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: rgba(0, 0, 0, 0.8);
+}
+main p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+main img:not(.companies > .container img) {
+  width: 100%;
+}
+
+.btn {
+  color: #000;
+  background: var(--primary-color);
+  font-size: 18px;
+  border: 1px Solid var(--primary-color);
+  padding: 5px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all ease-in-out;
+}
+
+.btn:hover {
+  background: var(--secondary-color);
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.desktop {
+  display: none;
+}
+
+/***************************** Header styles *****************************/
+
+.header {
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+}
+.header > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header > .container .logo {
+  width: 6.5rem;
+  flex: 0.9;
+}
+.header .mobile-menu .fa-bars {
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+/************************ Hero ***********************/
+.hero-mobile {
+  padding-bottom: 30px;
+}
+
+.hero-mobile > .container > h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-mobile .hero-image-mobile {
+  width: 300px;
+  margin: auto;
+  z-index: -99;
+  position: relative;
+}
+
+.hero-mobile .get-started-form-mobile {
+  background: #fff;
+  margin-top: -3.5rem;
+  margin-bottom: 20px;
+}
+
+.get-started-form-mobile > input {
+  display: block;
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+  outline: none;
+}
+
+.get-started-form-mobile > input::placeholder {
+  opacity: 0.6;
+}
+
+.get-started-form-mobile > button {
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.hero-mobile p {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 5px;
+}
+
+.hero-mobile p.about {
+  font-weight: 700;
+}
+
+/************************** Companies ***************************/
+.companies {
+  background: var(--gray-bg);
+  padding: 40px 0;
+}
+
+.companies > .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.companies > .container img {
+  height: 25px;
+  margin: 5px 10px;
+}
+
+/**************************** Paid early *************************/
+.paid-early {
+  background: var(--gray-bg);
+}
+
+.paid-early > .container .right-part {
+  order: 1;
+  margin-top: 40px;
+}
+
+/************************** Fee free ******************************/
+.fee-free > .container .right-part {
+  margin-top: 30px;
+}
+
+/***************************** Credit builder ****************************/
+.credit-builder {
+  background: var(--gray-bg);
+}
+
+.credit-builder > .container .right-part {
+  order: 1;
+  margin-top: 30px;
+}
+
+/************************** Grow fast ********************************/
+.grow-fast > .container .right-part {
+  margin-top: 30px;
+}
+
+/*************************** Alerts *******************************/
+.alerts {
+  background: var(--gray-bg);
+}
+.alerts > .container .left-part {
+  order: 1;
+  margin-top: 40px;
+}
+
+/************************** Security ****************************/
+.security-mobile > .container > img {
+  width: 200px !important;
+  margin: 20px auto;
+}
+
+.security-mobile h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.security-mobile p {
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/*************************** Get started ****************************/
+.get-started {
+  background: #f0fbf5;
+}
+
+.get-started > .container .right-part {
+  margin-top: 40px;
+}
+.get-started > .container .get-started-form-mobile > input {
+  background: #fafafa;
+}
+
+/*************************** Footer ***************************/
+.footer {
+  padding: 40px 0;
+}
+
+.footer .footer-nav-header {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.footer .footer-nav-item {
+  margin-bottom: 20px;
+}
+
+.footer .footer-nav-item:last-child {
+  margin-bottom: 30px;
+}
+
+.footer .footer-nav-item a {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  transition: all ease-in-out;
+}
+
+.footer .footer-nav-item a:hover {
+  color: var(--secondary-color);
+}
+
+.footer .footer-nav-social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+}
+
+.footer .footer-nav-social > div {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.footer .footer-nav-social > div:hover {
+  opacity: 0.7;
+}
+
+.footer .footer-nav-social .facebook {
+  background: #3c579e;
+}
+.footer .footer-nav-social .twitter {
+  background: #55acee;
+}
+.footer .footer-nav-social .instagram {
+  background: linear-gradient(to top right, #f4a617, #a01acb);
+}
+
+.footer .footer-nav-social > div > a {
+  color: #fff;
+  font-size: 35px;
+}
+.footer .footer-nav-social > div > a:hover {
+  color: #fff;
+}
+
+.footer .footer-text {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.footer .footer-text sub {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 12px;
+}
