@@ -39,7 +39,7 @@ main {
   margin-top: 10vh;
 }
 
-main > section > .container:not(.hero-mobile, .companies > .container) {
+main section > .container:not(.hero-mobile, .companies > .container) {
   padding: 50px 0;
   display: flex;
   flex-direction: column;
@@ -79,10 +79,47 @@ main img:not(.companies > .container img) {
 .container {
   width: 90%;
   margin: auto;
+  max-width: 1000px;
 }
 
 .desktop {
   display: none;
+}
+
+@media (min-width: 800px) {
+  .mobile {
+    display: none;
+  }
+
+  .btn {
+    padding: 10px 10px;
+    border-radius: 50px;
+    font-size: 20px;
+  }
+
+  main section > .container:not(.hero-mobile, .companies > .container) {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main section > .container > .left-part {
+    width: 50%;
+    margin-right: 3rem;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  main section > .container > .right-part {
+    width: 50%;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}
+@media (min-width: 1000px) {
+  .btn {
+    padding: 10px 35px;
+  }
 }
 
 /***************************** Header styles *****************************/
@@ -110,6 +147,54 @@ main img:not(.companies > .container img) {
   color: var(--primary-color);
 }
 
+/* Media qeury */
+@media (min-width: 800px) {
+  .header .logo {
+    flex: 2;
+    margin-right: 3rem;
+  }
+  .header .nav {
+    flex: 5;
+    justify-self: flex-start;
+  }
+  .header .nav .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .header .login {
+    flex: 3;
+    justify-self: flex-end;
+  }
+
+  .header .login-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .header .login-link {
+    display: block;
+  }
+
+  .header .nav-link {
+    margin-right: 1.8rem;
+  }
+  .header .nav-links > .nav-link:last-child {
+    margin-right: 0;
+  }
+
+  .header .nav-link > a {
+    color: #000;
+    font-weight: 700;
+    transition: all 0.1s ease-in-out;
+  }
+  .header .nav-link > a:hover {
+    color: var(--secondary-color);
+  }
+}
+
 /************************ Hero ***********************/
 .hero-mobile {
   padding-bottom: 30px;
@@ -134,7 +219,8 @@ main img:not(.companies > .container img) {
   margin-bottom: 20px;
 }
 
-.get-started-form-mobile > input {
+.get-started-form-mobile > input,
+.get-started-form > input {
   display: block;
   width: 100%;
   padding: 15px 20px;
@@ -142,27 +228,71 @@ main img:not(.companies > .container img) {
   border: 1px solid rgba(0, 0, 0, 0.3);
   font-size: 18px;
   outline: none;
+  background: #fafafa;
 }
 
-.get-started-form-mobile > input::placeholder {
+.get-started-form-mobile > input::placeholder,
+.get-started-form > input::placeholder {
   opacity: 0.6;
 }
 
-.get-started-form-mobile > button {
+.get-started-form-mobile > button,
+.get-started-form > button {
   width: 100%;
   padding: 15px;
   font-size: 20px;
   margin-top: 10px;
 }
 
-.hero-mobile p {
+.hero-mobile p,
+.hero sub {
   font-size: 13px;
   color: rgba(0, 0, 0, 0.6);
   margin-bottom: 5px;
 }
 
-.hero-mobile p.about {
+.hero-mobile p.about,
+.hero sub.about {
   font-weight: 700;
+}
+
+/* Media qeury */
+@media (min-width: 800px) {
+  .hero.desktop {
+    display: block;
+  }
+  .hero > .container {
+    flex-direction: row;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+  .get-started-form {
+    margin: 2rem 0 1rem 0;
+  }
+  .get-started-form > button {
+    width: 200px;
+    padding: 12px 13px;
+  }
+  .get-started-form > input {
+    padding: 12px 20px;
+  }
+}
+@media (min-width: 1000px) {
+  .hero h1 {
+    font-size: 4rem;
+  }
+  .get-started-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .get-started-form > button {
+    margin-top: 0;
+    margin-left: 1rem;
+  }
 }
 
 /************************** Companies ***************************/
@@ -181,6 +311,17 @@ main img:not(.companies > .container img) {
 .companies > .container img {
   height: 25px;
   margin: 5px 10px;
+}
+
+/* Media query */
+@media (min-width: 1000px) {
+  .companies > .container img {
+    height: 35px;
+    margin: 5px 15px;
+  }
+  .companies > .container {
+    justify-content: space-between;
+  }
 }
 
 /**************************** Paid early *************************/
@@ -246,9 +387,6 @@ main img:not(.companies > .container img) {
 
 .get-started > .container .right-part {
   margin-top: 40px;
-}
-.get-started > .container .get-started-form-mobile > input {
-  background: #fafafa;
 }
 
 /*************************** Footer ***************************/
@@ -329,4 +467,25 @@ main img:not(.companies > .container img) {
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 12px;
+}
+
+/* Media query */
+@media (min-width: 800px) {
+  .footer {
+    padding: 5rem 0;
+  }
+  .footer .footer-nav,
+  .footer .footer-nav-links {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer .footer-nav-links {
+    flex: 0.9;
+  }
+  .footer .footer-nav {
+    margin-bottom: 1rem;
+  }
+  .footer .footer-nav-social {
+    width: 200px;
+  }
 }
